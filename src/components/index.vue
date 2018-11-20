@@ -31,7 +31,7 @@
               <div class="btns" @click="btns('Ele_Table')">Elemt表格</div>
               <div class="btns" @click="btns('ele_tabDome')">Elemt表格dome</div>
               <div class="btns" @click="btns('turnPDF')">转换为PDF</div>
-              
+              <div class="btns" @click="btns('button')">按钮切换</div>
           </el-aside>
           
           <!-- ele_tabDome -->

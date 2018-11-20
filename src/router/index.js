@@ -10,6 +10,7 @@ import From from '@/components/from'
 import Ele_Table from '@/components/Ele_Table'
 import Ele_TableDome from '@/components/ele_tabDome'
 import TurnPDF from "@/components/turnPDF"
+import Button from "@/components/button"
 
 Vue.use(Router)
 
@@ -73,6 +74,12 @@ export default new Router({
           name:'turnPDF',
           component:TurnPDF,
           meta:{title:'转换为PDF'}
+        },
+        {
+          path:'/index/button',
+          name:'button',
+          component:Button,
+          meta:{title:'按钮切换'}
         }
       ]
     }
