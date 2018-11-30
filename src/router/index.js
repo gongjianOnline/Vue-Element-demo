@@ -11,6 +11,7 @@ import Ele_Table from '@/components/Ele_Table'
 import Ele_TableDome from '@/components/ele_tabDome'
 import TurnPDF from "@/components/turnPDF"
 import Button from "@/components/button"
+import Menu from "@/components/menu";
 
 Vue.use(Router)
 
@@ -80,6 +81,12 @@ export default new Router({
           name:'button',
           component:Button,
           meta:{title:'按钮切换'}
+        },
+        {
+          path:'/index/menu',
+          name:'menu',
+          component:Menu,
+          meta:{title:'测试菜单'}
         }
       ]
     }

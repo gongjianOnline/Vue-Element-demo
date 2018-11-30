@@ -32,6 +32,7 @@
               <div class="btns" @click="btns('ele_tabDome')">Elemt表格dome</div>
               <div class="btns" @click="btns('turnPDF')">转换为PDF</div>
               <div class="btns" @click="btns('button')">按钮切换</div>
+              <div class="btns" @click="btns('menu')">菜单栏测试</div>
           </el-aside>
           
           <!-- ele_tabDome -->

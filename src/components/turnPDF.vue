@@ -52,14 +52,21 @@ export default {
                 }
             };
             this.LineInit()
+            //调用html2Canvas方法，传入DOM元素，并调用回调函数
             html2Canvas(document.getElementById("pdf")).then(function(canvas){
+                //原始的canvas高、宽
                 let contentWidth = canvas.width;
                 let contentHeight = canvas.height;
+                //计算后的图片高度 为A4值的高度
                 let imgWidth = 595.28;
                 let imgHeight = 592.28 / contentWidth * contentHeight;
+                //转换图片的类型和质量1-0
                 let pageData = canvas.toDataURL(['image/jpeg', 0]);
+                //创建jsPDF实例
                 let PDF = new JsPDF('', 'pt', 'a4');
+                //添加图片地址，类型，等参数
                 PDF.addImage(pageData, 'JPEG', 0, 0, imgWidth, imgHeight);
+                //导出pdf并下载
                 PDF.save( 'test'+'.pdf');
                 that.Line.series[0].label = null;
                 that.LineInit();
