@@ -1,6 +1,7 @@
 <template>
 		<div>
 			<h3>mock数据自动化</h3>
+			<button @click="test">test</button>
 		</div>
 
 </template>
@@ -12,17 +13,17 @@
 
 				}
 			},
-			mounted(){
-				this.$axios({
-					method:'get',
-					url:''
-				}).then((res)=>{
-					console.log(res)
-				})
-			},
+			mounted(){},
 			beforeDestroy(){},
 			methods:{
-				
+				test(){
+					this.$axios({
+					method:'post',
+					url:'/news/index'
+					}).then((res)=>{
+						console.log(res)
+					})
+				}
 			}
 		}
 </script>

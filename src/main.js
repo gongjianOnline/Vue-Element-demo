@@ -45,7 +45,7 @@ import CircleMenu from 'vue-circle-menu'
 Vue.component('CircleMenu', CircleMenu)
 
 //引入mock
-
+require('./mock.js')
 
 /* eslint-disable no-new */
 new Vue({
