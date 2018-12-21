@@ -34,6 +34,9 @@
               <div class="btns" @click="btns('button')">按钮切换</div>
               <div class="btns" @click="btns('menu')">菜单栏测试</div>
               <div class="btns" @click="btns('Java')">Java测试表格</div>
+              <div class="btns" @click="btns('pythontab')">python图片</div>
+              <div class="btns" @click="btns('circle')">圆环菜单</div>
+              <div class="btns" @click="btns('mock')">数据自动化</div>
           </el-aside>
           
           <!-- ele_tabDome -->

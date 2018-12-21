@@ -13,6 +13,9 @@ import TurnPDF from "@/components/turnPDF"
 import Button from "@/components/button"
 import Menu from "@/components/menu"
 import JavaElementTable from "@/components/JavaElemTable"
+import Pythontab from "@/components/pythontab"
+import Circle  from "@/components/circle"
+import Mock from "@/components/mock"
 
 Vue.use(Router)
 
@@ -94,6 +97,24 @@ export default new Router({
           name:'Java',
           component:JavaElementTable,
           meta:{title:'Java项目表格demo'}
+        },
+        {
+          path:'/index/pythontab',
+          name:'pythontab',
+          component:Pythontab,
+          meta:{title:'图片放大'}
+        },
+        {
+          path:'/index/circle',
+          name:'circle',
+          component:Circle,
+          meta:{title:'手机端圆环菜单'}
+        },
+        {
+          path:'/index/mock',
+          name:'mock',
+          component:Mock,
+          meta:{title:'前端数据自动化'}
         }
       ]
     }

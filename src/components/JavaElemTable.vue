@@ -4,6 +4,7 @@
           :data="tableData"
           style="width: 100%">
             <el-table-column
+                align="center"
                 label="比例">
                 <template slot-scope="scope">
                     <el-input
@@ -20,6 +21,7 @@
                 </template>
             </el-table-column>
             <el-table-column
+                align="center"
                 label="兑换">
                 <template slot-scope="scope">
                     <el-input
@@ -30,6 +32,7 @@
                 </template>
             </el-table-column>
             <el-table-column
+                align="center"
                 label="操作">
                 <template slot-scope="scope">
                       <el-button type="danger" plain @click="deleBtn(scope)">删除</el-button>
@@ -42,6 +45,14 @@
             <el-button type="primary" plain @click="addBtn()">新增</el-button>
             <el-button type="success" plain @click="submit()">提交</el-button>
         </div>
+        <el-input
+                v-model="input"
+                autofocus
+                style="width:100px"
+                ref="inputRef"
+                name="num"
+                clearable>
+        </el-input>
   
     </div>
 </template>
@@ -51,7 +62,8 @@
         name: 'HelloWorld',
         data () {
             return {
-                tableData:[{},{},{},{}]
+                tableData:[{},{},{},{}],
+                input:''
             }
         },
         mounted(){
@@ -85,7 +97,8 @@
                 console.log(than1Data);
                 console.log(than2Data);
                 console.log(numData);
-
+                this.input = ""
+                this.$refs.inputRef.focus();
             }
         }
 

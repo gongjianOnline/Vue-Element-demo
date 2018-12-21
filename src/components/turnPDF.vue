@@ -67,7 +67,7 @@ export default {
                 //添加图片地址，类型，等参数
                 PDF.addImage(pageData, 'JPEG', 0, 0, imgWidth, imgHeight);
                 //导出pdf并下载
-                PDF.save( 'test'+'.pdf');
+                PDF.save( 'test'+'.jpg');
                 that.Line.series[0].label = null;
                 that.LineInit();
             });
