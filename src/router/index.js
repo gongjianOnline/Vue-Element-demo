@@ -16,6 +16,10 @@ import JavaElementTable from "@/components/JavaElemTable"
 import Pythontab from "@/components/pythontab"
 import Circle  from "@/components/circle"
 import Mock from "@/components/mock"
+import TestBug from "@/components/testBUG"
+import Radar from "@/components/radar"
+import Echmap from "@/components/echMap"
+import Richtext from "@/components/richtext"
 
 Vue.use(Router)
 
@@ -115,6 +119,30 @@ export default new Router({
           name:'mock',
           component:Mock,
           meta:{title:'前端数据自动化'}
+        },
+        {
+          path:"/index/testBUG",
+          name:"testBUG",
+          component:TestBug,
+          meta:{title:"测试BUG"}
+        },
+        {
+          path:'/index/radar',
+          name:'radar',
+          component:Radar,
+          meta:{title:"雷达图刻度调试"}
+        },
+        {
+          path:'/index/echmap',
+          name:'echmap',
+          component:Echmap,
+          meta:{title:"雷达图刻度调试"}
+        },
+        {
+          path:"/index/richtext",
+          name:'richtext',
+          component:Richtext,
+          meta:{title:'富文本测试'}
         }
       ]
     }

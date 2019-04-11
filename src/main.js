@@ -8,7 +8,6 @@ import 'element-ui/lib/theme-chalk/index.css'
 import VueCookie from 'vue-cookie'
 import $ from 'jquery'
 
-
 import axios from 'axios'
 Vue.prototype.$axios= axios
 
@@ -46,6 +45,16 @@ Vue.component('CircleMenu', CircleMenu)
 
 //引入mock
 require('./mock.js')
+
+//vue富文本框
+// import VueQuillEditor  from 'vue-quill-editor'
+// import 'quill/dist/quill.core.css'
+// import 'quill/dist/quill.snow.css'
+// import 'quill/dist/quill.bubble.css' 
+// Vue.use(VueQuillEditor);
+
+
+
 
 /* eslint-disable no-new */
 new Vue({

@@ -53,54 +53,52 @@
 			testBtns(val){
 				this.$axios({
 					method:'get',
-                    url:'',
-                    params:{
-                        subjectid:val
-                    }
+          url:'../../static/map/langfang.json',
 				}).then((response)=>{
-					//释放表格
-					this.tableData = [];
+					console.log(response)
+					// //释放表格
+					// this.tableData = [];
 
-					console.log(response);
-					//老师姓名处理
-					var name = response.data.data.teacher;
-					var namearr = [];
-					for(let i=0;i<name.length;i++){
-						var nameobj = {};
-						nameobj.name = name[i].name;
-						nameobj.props = "props"+i;
-						nameobj.val = i 
-						namearr[i] = nameobj;
-					};
-					this.namedata = namearr;
-					console.log(namearr);
+					// console.log(response);
+					// //老师姓名处理
+					// var name = response.data.data.teacher;
+					// var namearr = [];
+					// for(let i=0;i<name.length;i++){
+					// 	var nameobj = {};
+					// 	nameobj.name = name[i].name;
+					// 	nameobj.props = "props"+i;
+					// 	nameobj.val = i 
+					// 	namearr[i] = nameobj;
+					// };
+					// this.namedata = namearr;
+					// console.log(namearr);
 
-					//表格数据设置
-					var table = response.data.data.rs;
-					var tableInit = [];
-					for(var key in table){
-						tableInit.push(table[key])
-					};
-					console.log("初始化表格数据")
-					console.log(tableInit);
-					for(let i=0;i<tableInit.length;i++){
-						if(i == 0){
-							for(let j=0;j<tableInit[i].length;j++){
-								var tbObj = {};
-								tbObj.date = tableInit[i][j].pla_nam;
-								tbObj.name = tableInit[i][j].kon_nam;
-								tbObj["props"+0] = tableInit[i][j].proportion;
-								this.tableData.push(tbObj);
-							}
-						}else{
-							var tableData = this.tableData;
-							for(let j=0;j<tableInit[i].length;j++){
-								tableData[j]["props"+this.namedata[i].val] = tableInit[i][j].proportion;
-							}
-						}
-					}
-					//最终渲染
-					console.log(this.tableData);
+					// //表格数据设置
+					// var table = response.data.data.rs;
+					// var tableInit = [];
+					// for(var key in table){
+					// 	tableInit.push(table[key])
+					// };
+					// console.log("初始化表格数据")
+					// console.log(tableInit);
+					// for(let i=0;i<tableInit.length;i++){
+					// 	if(i == 0){
+					// 		for(let j=0;j<tableInit[i].length;j++){
+					// 			var tbObj = {};
+					// 			tbObj.date = tableInit[i][j].pla_nam;
+					// 			tbObj.name = tableInit[i][j].kon_nam;
+					// 			tbObj["props"+0] = tableInit[i][j].proportion;
+					// 			this.tableData.push(tbObj);
+					// 		}
+					// 	}else{
+					// 		var tableData = this.tableData;
+					// 		for(let j=0;j<tableInit[i].length;j++){
+					// 			tableData[j]["props"+this.namedata[i].val] = tableInit[i][j].proportion;
+					// 		}
+					// 	}
+					// }
+					// //最终渲染
+					// console.log(this.tableData);
 				})
 			}
 

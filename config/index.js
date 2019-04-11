@@ -11,7 +11,7 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
       '/': {
-        target: 'http://localhost:8081/',
+        target: 'http://xilou123.gotoip3.com/',
         changeOrigin: true,
         secure: false,
         pathRewrite: {

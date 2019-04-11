@@ -37,13 +37,17 @@
               <div class="btns" @click="btns('pythontab')">python图片</div>
               <div class="btns" @click="btns('circle')">圆环菜单</div>
               <div class="btns" @click="btns('mock')">数据自动化</div>
+              <div class="btns" @click="btns('testBUG')">测试BUG</div>
+              <div class="btns" @click="btns('radar')">雷达图刻度测试</div>
+              <div class="btns" @click="btns('echmap')">地图测试</div>
+              <div class="btns" @click="btns('richtext')">富文本测试</div>
           </el-aside>
           
           <!-- ele_tabDome -->
 
           <el-main>
             <div class="tagBox">
-              <div v-for="tag in tags" @click="tagbtn(tag.routers)"> 
+              <div v-for="(tag,index) in tags" @click="tagbtn(tag.routers)" :key="index"> 
                   <el-tag
                     class="tag"
                     :key="tag.name"
