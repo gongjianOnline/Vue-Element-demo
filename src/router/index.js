@@ -20,6 +20,9 @@ import TestBug from "@/components/testBUG"
 import Radar from "@/components/radar"
 import Echmap from "@/components/echMap"
 import Richtext from "@/components/richtext"
+import Progress from"@/components/progress"
+import BaiduMap from "@/components/baiduMap"
+import Ech3D from "@/components/ech3D"
 
 Vue.use(Router)
 
@@ -143,6 +146,24 @@ export default new Router({
           name:'richtext',
           component:Richtext,
           meta:{title:'富文本测试'}
+        },
+        {
+          path:'/index/progress',
+          name:'progress',
+          component:Progress,
+          meta:{title:'进度条'}
+        },
+        {
+          path:"/index/baiduMap",
+          name:'baiduMap',
+          component:BaiduMap,
+          meta:{title:"百度地图"}
+        },
+        {
+          path:'/index/ech3D',
+          name:'ech3D',
+          component:Ech3D,
+          meta:{title:"ech3D"}
         }
       ]
     }

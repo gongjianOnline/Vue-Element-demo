@@ -29,6 +29,7 @@ Vue.prototype.$md5 = md5;
 import echarts from 'echarts'
 Vue.prototype.$echarts = echarts //引入组件
 
+
 //图片放大插件
 import vueDirectiveImagePreviewer from 'vue-directive-image-previewer'
 import 'vue-directive-image-previewer/dist/assets/style.css'

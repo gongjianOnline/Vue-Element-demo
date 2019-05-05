@@ -41,6 +41,9 @@
               <div class="btns" @click="btns('radar')">雷达图刻度测试</div>
               <div class="btns" @click="btns('echmap')">地图测试</div>
               <div class="btns" @click="btns('richtext')">富文本测试</div>
+              <div class="btns" @click="btns('progress')">上传进度条测试</div>
+              <div class="btns" @click="btns('baiduMap')">百度地图</div>
+              <div class="btns" @click="btns('ech3D')">ech3D</div>
           </el-aside>
           
           <!-- ele_tabDome -->
