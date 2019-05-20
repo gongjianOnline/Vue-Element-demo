@@ -23,6 +23,7 @@ import Richtext from "@/components/richtext"
 import Progress from"@/components/progress"
 import BaiduMap from "@/components/baiduMap"
 import Ech3D from "@/components/ech3D"
+import NodeTest from "@/components/nodeTest"
 
 Vue.use(Router)
 
@@ -164,6 +165,12 @@ export default new Router({
           name:'ech3D',
           component:Ech3D,
           meta:{title:"ech3D"}
+        },
+        {
+          path:'/index/nodeTest',
+          name:'nodeTest',
+          component:NodeTest,
+          meta:{title:"node接口测试"}
         }
       ]
     }

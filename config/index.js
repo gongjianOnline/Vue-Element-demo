@@ -11,7 +11,7 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
       '/': {
-        target: 'http://api.map.baidu.com/',
+        target: 'http://localhost:8888/',
         changeOrigin: true,
         secure: false,
         pathRewrite: {

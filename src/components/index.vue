@@ -44,6 +44,7 @@
               <div class="btns" @click="btns('progress')">上传进度条测试</div>
               <div class="btns" @click="btns('baiduMap')">百度地图</div>
               <div class="btns" @click="btns('ech3D')">ech3D</div>
+              <div class="btns" @click="btns('nodeTest')">nodeTest</div>
           </el-aside>
           
           <!-- ele_tabDome -->
