@@ -45,6 +45,8 @@
               <div class="btns" @click="btns('baiduMap')">百度地图</div>
               <div class="btns" @click="btns('ech3D')">ech3D</div>
               <div class="btns" @click="btns('nodeTest')">nodeTest</div>
+              <div class="btns" @click="btns('tabmerge')">表格合并</div>
+              
           </el-aside>
           
           <!-- ele_tabDome -->

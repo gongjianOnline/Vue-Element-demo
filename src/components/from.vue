@@ -78,6 +78,44 @@
 			<input type="text" name="contents" v-model="contents"  value="">
 			<button @click="btns()">测试提交</button>
 
+
+		<h1>java表单测试</h1>
+		<div>
+				<form   action="http://10.3.80.36:8080/diaowen2/login.jsp" 
+					method="post"  
+					enctype="content-type/x-www-form-urlencoded" 
+					id="form">
+					<div>
+						<label for="username">用户名：</label>
+						<input type="text" name="username" id="username">   
+					</div>
+					<div>
+						<label for="password">密码：</label>
+						<input type="password" name="password" id="password">
+					</div>
+					<div>
+						<label for="role">角色：</label>
+						<input type="text" name="role" id="role">
+					</div>
+					<!-- <div>
+						<input type="submit" value="提交">
+					</div> -->
+				</form>
+				<el-button type="primary" @click="test()">提交</el-button>
+		</div>
+
+		
+		<h1>上传表单</h1>
+		<div>
+			<form id="uploadForm"  enctype="multipart/form-data">
+				<input type="text" name="user" >
+			</form>
+			<el-button type="primary" @click="fileTest()">提交</el-button>
+		</div>
+		
+
+		
+		
 	</div>
 </template>
 
@@ -123,7 +161,22 @@
 				}).then((response)=>{
 						console.log(response)
 				})
+			},
+
+			test(){
+				$("#form")[0].submit()
+			},
+
+			fileTest(){
+				console.log("测试");
+				console.log($("#uploadForm")[0]);
+				let formData = new FormData($("#uploadForm")[0]);
+				console.log(formData) 
+
 			}
+
+
+
 			
 		}
 

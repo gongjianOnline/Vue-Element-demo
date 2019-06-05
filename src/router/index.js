@@ -24,7 +24,7 @@ import Progress from"@/components/progress"
 import BaiduMap from "@/components/baiduMap"
 import Ech3D from "@/components/ech3D"
 import NodeTest from "@/components/nodeTest"
-
+import Tabmerge from "@/components/tabmerge"
 Vue.use(Router)
 
 export default new Router({
@@ -171,6 +171,12 @@ export default new Router({
           name:'nodeTest',
           component:NodeTest,
           meta:{title:"node接口测试"}
+        },
+        {
+          path:'/index/tabmerge',
+          name:'tabmerge',
+          component:Tabmerge,
+          meta:{title:"表格合并"}
         }
       ]
     }
