@@ -46,7 +46,7 @@
               <div class="btns" @click="btns('ech3D')">ech3D</div>
               <div class="btns" @click="btns('nodeTest')">nodeTest</div>
               <div class="btns" @click="btns('tabmerge')">表格合并</div>
-              
+              <div class="btns" @click="btns('rollTable')">滚动表格</div>
           </el-aside>
           
           <!-- ele_tabDome -->

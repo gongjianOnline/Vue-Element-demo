@@ -37,8 +37,8 @@ export default {
             plateAll: [], //表格数据
             fadeJson:{},
         }
-    }
-},
+    },
+
     methods: {
       objectSpanMethod({row,column,rowIndex,columnIndex}){
         console.log("row");

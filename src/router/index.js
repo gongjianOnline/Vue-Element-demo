@@ -25,6 +25,7 @@ import BaiduMap from "@/components/baiduMap"
 import Ech3D from "@/components/ech3D"
 import NodeTest from "@/components/nodeTest"
 import Tabmerge from "@/components/tabmerge"
+import RollTable from "@/components/rollTable"
 Vue.use(Router)
 
 export default new Router({
@@ -177,6 +178,12 @@ export default new Router({
           name:'tabmerge',
           component:Tabmerge,
           meta:{title:"表格合并"}
+        },
+        {
+          path:'/index/rollTable',
+          name:"rollTable",
+          component:RollTable,
+          meta:{title:"滚动表格"}
         }
       ]
     }

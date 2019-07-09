@@ -12,7 +12,7 @@
   "dependencies": {
     "echarts": "^4.2.1",
     "echarts-gl": "^1.1.1",
-    "element-ui": "^2.4.1",
+    "element-ui": "^2.10.1",
     "html2canvas": "^1.0.0-alpha.12",
     "jquery": "^3.4.0",
     "js-base64": "^2.4.9",

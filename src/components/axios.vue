@@ -1,7 +1,13 @@
 <template>	
 		<div>
-			<h1>该axios已经设置本地API代理</h1>
-			<button @click="btns()">click</button>
+			<div>
+				<h1>该axios已经设置本地API代理</h1>
+				<button @click="btns()">click</button>
+			</div>
+			<div>
+				<h1>async await异步调用接口测试</h1>
+				<button @click="asyncbtn()">click</button>
+			</div>
 		</div>	
 </template>
 
@@ -13,18 +19,6 @@
 
 			}
 		},
-		methods:{
-			btns(){
-				this.$axios({
-					methods:"get",
-					url:'jurisdiction/page_permissions.php',
-					params:{
-						id:1
-					}
-				}).then((response)=>{
-					console.log(response)
-				})
-			}
-		}
+		methods:{}
 	}
 </script>

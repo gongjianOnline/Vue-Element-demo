@@ -4,7 +4,6 @@
 			<div class="bodyBox">
 				<el-form ref="form" :model="form" label-width="80px" style="width: 30%">
 					
-				</style>
 					<el-form-item label="产品名称">
 						<el-input v-model="form.name"></el-input>
 					</el-form-item>
