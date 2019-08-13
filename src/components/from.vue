@@ -111,6 +111,19 @@
 			</form>
 			<el-button type="primary" @click="fileTest()">提交</el-button>
 		</div>
+
+		<h1>获取毫秒值</h1>
+		<div>
+			<el-date-picker
+				v-model="Millisecond"
+				type="daterange"
+				value-format="timestamp"
+				range-separator="至"
+				start-placeholder="开始日期"
+				end-placeholder="结束日期">
+			</el-date-picker>
+			<el-button type="primary" @click="MillisecondFun">查看</el-button>
+		</div>
 		
 
 		
@@ -132,11 +145,8 @@
 					resource:'',
 					desc:''
 				},
-				contents:""
-
-
-
-
+				contents:"",
+				Millisecond:'',
 			}
 		},
 
@@ -171,7 +181,9 @@
 				console.log($("#uploadForm")[0]);
 				let formData = new FormData($("#uploadForm")[0]);
 				console.log(formData) 
-
+			},
+			MillisecondFun(){
+				console.log(this.Millisecond)
 			}
 
 

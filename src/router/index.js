@@ -26,13 +26,14 @@ import Ech3D from "@/components/ech3D"
 import NodeTest from "@/components/nodeTest"
 import Tabmerge from "@/components/tabmerge"
 import RollTable from "@/components/rollTable"
+import Carousel from "@/components/carousel"
 Vue.use(Router)
 
 export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Index',
+      // name: 'Index',
       component: Index,
       children:[
       	{
@@ -184,7 +185,14 @@ export default new Router({
           name:"rollTable",
           component:RollTable,
           meta:{title:"滚动表格"}
-        }
+        },
+        {
+          path:'/index/carousel',
+          name:"carousel",
+          component:Carousel,
+          meta:{title:"echarts轮播"}
+        },
+
       ]
     }
   ]

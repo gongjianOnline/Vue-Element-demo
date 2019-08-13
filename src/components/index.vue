@@ -47,6 +47,8 @@
               <div class="btns" @click="btns('nodeTest')">nodeTest</div>
               <div class="btns" @click="btns('tabmerge')">表格合并</div>
               <div class="btns" @click="btns('rollTable')">滚动表格</div>
+              <div class="btns" @click="btns('carousel')">echart轮播</div>
+              
           </el-aside>
           
           <!-- ele_tabDome -->
@@ -63,13 +65,22 @@
                     {{tag.name}}
                   </el-tag>
               </div>
-            
             </div>
-            <router-view></router-view>  
-          </el-main>
-        
-        </el-container>
+            <div class="select" id="select">
+				<el-select v-model="value" placeholder="请选择">
+					<el-option
+						v-for="item in options"
+						:key="item.value"
+						:label="item.label"
+						:value="item.value">
+					</el-option>
+				</el-select>
+            </div>
 
+            <router-view></router-view>  
+			
+		  </el-main>
+        </el-container>
       </el-container>
 
       <!-- 模拟移动端模态框 -->
@@ -87,16 +98,40 @@ export default {
         tags: [
             { name: '首页', type:''  ,routers:'Shouye'}
         ],
-        dialogVisible: false
+		dialogVisible: false,
+		options: [
+			{
+				value:"123",
+				label:"1"
+			}
+    ],
+    value:'123'
     }
   },
-  mounted(){
-      console.log("index页面函数");
-      console.log(this.$cookie.get("tags"));
-  },
+	mounted(){
+		console.log("index页面函数");
+		console.log(this.$cookie.get("tags"));
+		// 监听（绑定）滚轮滚动事件
+		window.addEventListener('scroll', this.handleScroll, true);  
+	},
+  	destroyed(){
+		//  离开页面清除（移除）滚轮滚动事件
+        window.removeEventListener('scroll', this.handleScroll);   
+	},
+
 
 
   methods:{
+	  handleScroll(){
+		  if($(document).scrollTop()>=137){
+			$("#select")[0].classList.add("positions");
+		  } 
+		  if($(document).scrollTop()<=137){
+			  $("#select")[0].classList.remove("positions");
+		  }
+	  },
+
+
     btns(name){
       this.$router.push({
         name:name
@@ -130,7 +165,6 @@ export default {
       }else{
         elAside.style.display = "inline"
       }
-
     }
 
 
@@ -153,7 +187,8 @@ export default {
           routeObj.routers =to.name;
           this.tags.push(routeObj);
       }
-    }
+	},
+	
   },
 
   //在页面销毁前执行
@@ -204,6 +239,16 @@ export default {
   margin-right: 10px;
   cursor: pointer;
 }
+.select{
+	text-align: right
+}
+.positions{
+	  width:100%;
+	  height:30px;
+	  position:fixed;
+	  top:0;
+	  left:0;
+}
 
 
 /*响应式操作*/
@@ -217,6 +262,7 @@ export default {
   .btnMold{
     display: inline;
   }
+  
 
 }
 
