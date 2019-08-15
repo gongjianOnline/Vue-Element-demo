@@ -2,15 +2,15 @@
     <div class="">
         <div>
             <el-radio-group v-model="classCity">
-                <el-radio :label="7" @change="btns()">四</el-radio>
-                <el-radio :label="5" @change="btns()">八</el-radio>
+                <el-radio :label="7" @change="btns()">test1</el-radio>
+                <el-radio :label="5" @change="btns()">test2</el-radio>
             </el-radio-group>
         </div>
         <div>
             <el-radio-group v-model="subjectId">
-                <el-radio :label="6" @change="btns()">语</el-radio>
-                <el-radio :label="3" @change="btns()">数</el-radio>
-                <el-radio :label="5" @change="btns()">外</el-radio>
+                <el-radio :label="6" @change="btns()">test一</el-radio>
+                <el-radio :label="3" @change="btns()">test二</el-radio>
+                <el-radio :label="5" @change="btns()">test三</el-radio>
             </el-radio-group>
         </div>
     

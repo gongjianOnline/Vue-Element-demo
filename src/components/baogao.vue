@@ -87,6 +87,14 @@
           </el-cascader>
         </div>
 
+        <div>
+          <h3>按钮模仿验证限制请求时长</h3>
+          <el-button type="success" @click="verificationFun()" :disabled="verdis">
+            获取验证码 
+            <span v-show="count!==0">({{count}})</span>
+          </el-button>
+        </div>
+
         
 
         
@@ -163,122 +171,122 @@ export default {
      rs:[
           [
                 {
-                    "pla_nam": "常见有机物及其应用",
-                    "kon_nam": "苯的同系物",
-                    "proportion": "41",
-                    "claid": "3",
-                    "teacherid": "1"
+                    "pla_nam": "test",
+                    "kon_nam": "test",
+                    "proportion": "test",
+                    "claid": "test",
+                    "teacherid": "test"
                 },
                 {
-                    "pla_nam": "常见有机物及其应用",
-                    "kon_nam": "辨识简单有机化合物的同分异构体",
-                    "proportion": "0",
-                    "claid": "3",
-                    "teacherid": "1"
+                    "pla_nam": "test",
+                    "kon_nam": "test",
+                    "proportion": "test",
+                    "claid": "test",
+                    "teacherid": "test"
                 },
                 {
-                    "pla_nam": "常见有机物及其应用",
-                    "kon_nam": "乙醇的工业制法",
-                    "proportion": "0",
-                    "claid": "3",
-                    "teacherid": "1"
+                    "pla_nam": "test",
+                    "kon_nam": "test",
+                    "proportion": "test",
+                    "claid": "test",
+                    "teacherid": "test"
                 },
                 {
-                    "pla_nam": "化学综合计算",
-                    "kon_nam": "有关混合物反应的计算",
-                    "proportion": "64",
-                    "claid": "3",
-                    "teacherid": "1"
+                    "pla_nam": "test",
+                    "kon_nam": "test",
+                    "proportion": "test",
+                    "claid": "test",
+                    "teacherid": "test"
                 }
               ],
               [
                 {
-                    "pla_nam": "常见有机物及其应用",
-                    "kon_nam": "苯的同系物",
-                    "proportion": "54",
-                    "claid": "2",
-                    "teacherid": "7"
+                    "pla_nam": "test",
+                    "kon_nam": "test",
+                    "proportion": "test",
+                    "claid": "test",
+                    "teacherid": "test"
                 },
                 {
-                    "pla_nam": "常见有机物及其应用",
-                    "kon_nam": "辨识简单有机化合物的同分异构体",
-                    "proportion": "0",
-                    "claid": "2",
-                    "teacherid": "7"
+                    "pla_nam": "test",
+                    "kon_nam": "test",
+                    "proportion": "test",
+                    "claid": "test",
+                    "teacherid": "test"
                 },
                 {
-                    "pla_nam": "常见有机物及其应用",
-                    "kon_nam": "乙醇的工业制法",
-                    "proportion": "0",
-                    "claid": "2",
-                    "teacherid": "7"
+                    "pla_nam": "test",
+                    "kon_nam": "test",
+                    "proportion": "test",
+                    "claid": "test",
+                    "teacherid": "test"
                 },
                 {
-                    "pla_nam": "化学综合计算",
-                    "kon_nam": "有关混合物反应的计算",
-                    "proportion": "65",
-                    "claid": "2",
-                    "teacherid": "7"
+                    "pla_nam": "test",
+                    "kon_nam": "test",
+                    "proportion": "test",
+                    "claid": "test",
+                    "teacherid": "test"
                 }
         ],
               [
               {
-                    "pla_nam": "常见有机物及其应用",
-                    "kon_nam": "苯的同系物",
-                    "proportion": "100",
-                    "claid": "3",
-                    "teacherid": "13"
+                    "pla_nam": "test",
+                    "kon_nam": "test",
+                    "proportion": "test",
+                    "claid": "test",
+                    "teacherid": "test"
               },
               {
-                    "pla_nam": "常见有机物及其应用",
-                    "kon_nam": "辨识简单有机化合物的同分异构体",
-                    "proportion": "2",
-                    "claid": "3",
-                    "teacherid": "13"
+                    "pla_nam": "test",
+                    "kon_nam": "test",
+                    "proportion": "test",
+                    "claid": "test",
+                    "teacherid": "test"
               },
               {
-                    "pla_nam": "常见有机物及其应用",
-                    "kon_nam": "乙醇的工业制法",
-                    "proportion": "4",
-                    "claid": "3",
-                    "teacherid": "13"
+                    "pla_nam": "test",
+                    "kon_nam": "test",
+                    "proportion": "test",
+                    "claid": "test",
+                    "teacherid": "test"
               },
               {
-                    "pla_nam": "化学综合计算",
-                    "kon_nam": "有关混合物反应的计算",
-                    "proportion": "59",
-                    "claid": "3",
-                    "teacherid": "13"
+                    "pla_nam": "test",
+                    "kon_nam": "test",
+                    "proportion": "test",
+                    "claid": "test",
+                    "teacherid": "test"
               }
         ],
             [
             {
-                    "pla_nam": "常见有机物及其应用",
-                    "kon_nam": "苯的同系物",
-                    "proportion": "20",
-                    "claid": "2",
-                    "teacherid": "123"
+                    "pla_nam": "test",
+                    "kon_nam": "test",
+                    "proportion": "test",
+                    "claid": "test",
+                    "teacherid": "test"
                 },
                 {
-                    "pla_nam": "常见有机物及其应用",
-                    "kon_nam": "辨识简单有机化合物的同分异构体",
-                    "proportion": "20",
-                    "claid": "2",
-                    "teacherid": "123"
+                    "pla_nam": "test",
+                    "kon_nam": "test",
+                    "proportion": "test",
+                    "claid": "test",
+                    "teacherid": "test"
                 },
                 {
-                    "pla_nam": "常见有机物及其应用",
-                    "kon_nam": "乙醇的工业制法",
-                    "proportion": "30",
-                    "claid": "2",
-                    "teacherid": "123"
+                    "pla_nam": "test",
+                    "kon_nam": "test",
+                    "proportion": "test",
+                    "claid": "test",
+                    "teacherid": "test"
                 },
                 {
-                    "pla_nam": "化学综合计算",
-                    "kon_nam": "有关混合物反应的计算",
-                    "proportion": "20",
-                    "claid": "2",
-                    "teacherid": "123"
+                    "pla_nam": "test",
+                    "kon_nam": "test",
+                    "proportion": "test",
+                    "claid": "test",
+                    "teacherid": "test"
                 }
         ]      
      ],
@@ -311,7 +319,11 @@ export default {
         label:"label",
         value:"label",
         children:'children'
-    }
+    },
+
+    //验证限制参数
+    count:0,
+    verdis:false
 
 
     }
@@ -391,6 +403,23 @@ export default {
         this.selectedOptions = label;
         console.log("得到的联动Value");
         console.log(this.selectedOptions);
+    },
+
+    //验证码限制时间
+    verificationFun(){
+      this.count = 30;
+      this.verdis = true;
+      var timers = setInterval(()=>{
+        if(this.count<=1){
+          console.log("定时器停止");
+          this.verdis = false;
+          this.count = 0;
+          clearInterval(timers);
+        }else{
+          this.count --
+          console.log(this.count)
+        }
+      },1000)
     }
 
 

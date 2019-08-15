@@ -16,3 +16,9 @@ vue+elementUI  的项目练习
 ### 13.echarts图表缓存bug测试
 ### 14.echarts地图效果测试
 ### 15.vue-quill-editor富文本插件练习
+### 16.引入图片缩放组件
+### 17.Element-UI动态增删表格案例
+### 18.定时器仿上传上传进度条
+### 19.node.js+element-UI上传组件接收post文件
+### 20.vue-quill-editor富文本插件练习
+### 21.echarts加element轮播图表
