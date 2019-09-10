@@ -48,6 +48,7 @@
               <div class="btns" @click="btns('tabmerge')">表格合并</div>
               <div class="btns" @click="btns('rollTable')">滚动表格</div>
               <div class="btns" @click="btns('carousel')">echart轮播</div>
+              <div class="btns" @click="btns('echartClick')">echart单击</div>
               
           </el-aside>
           
@@ -67,14 +68,14 @@
               </div>
             </div>
             <div class="select" id="select">
-				<el-select v-model="value" placeholder="请选择">
-					<el-option
-						v-for="item in options"
-						:key="item.value"
-						:label="item.label"
-						:value="item.value">
-					</el-option>
-				</el-select>
+              <el-select v-model="value" placeholder="请选择">
+                <el-option
+                  v-for="item in options"
+                  :key="item.value"
+                  :label="item.label"
+                  :value="item.value">
+                </el-option>
+              </el-select>
             </div>
 
             <router-view></router-view>  
@@ -240,7 +241,8 @@ export default {
   cursor: pointer;
 }
 .select{
-	text-align: right
+	text-align: right;
+  z-index: 100000;
 }
 .positions{
 	  width:100%;

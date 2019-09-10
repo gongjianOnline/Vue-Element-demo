@@ -27,6 +27,7 @@ import NodeTest from "@/components/nodeTest"
 import Tabmerge from "@/components/tabmerge"
 import RollTable from "@/components/rollTable"
 import Carousel from "@/components/carousel"
+import EchartClick from "@/components/echartClick"
 Vue.use(Router)
 
 export default new Router({
@@ -191,6 +192,12 @@ export default new Router({
           name:"carousel",
           component:Carousel,
           meta:{title:"echarts轮播"}
+        },
+        {
+          path:'/index/echartClick',
+          name:"echartClick",
+          component:EchartClick,
+          meta:{title:"echarts单击"}
         },
 
       ]
